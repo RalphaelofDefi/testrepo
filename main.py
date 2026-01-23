@@ -5,7 +5,7 @@ from telegram.ext import Application, ContextTypes
 # CONFIG
 # ==============================
 
-BOT_TOKEN = "7640305678:AAHy2Z4GZlm8fSScjyk14YbIvlGqlujIx_4"
+BOT_TOKEN = "7640305678:AAFJiE-nOx-_TdbIuw6-AZbS_oD6wrp4o4s"
 CHAT_ID = 7463041041
 MESSAGE = "do start yur choirs"
 INTERVAL_SECONDS = 300
@@ -53,3 +53,4 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
