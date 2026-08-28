@@ -33,21 +33,7 @@
 | **Budget Allocation Form** (user sets per-category monthly limits) | ❌ Missing | No UI or API for defining budget thresholds per category. |
 | **Budget Overrun Alerts** (notifications when spending hits 80%/100%) | ❌ Missing | No threshold-checking or alert mechanism for budgets. |
 | **UML Class Diagram** classes (Expense, Income, Budget, AIAdvisor as separate entities) | ⚠️ Partially | `Transaction` model combines income+expense (document treats them as separate classes). No `Budget` or `AIAdvisor` classes. |
-| **Frontend (Presentation Layer)** | ⚠️ Separate repo | The `.docx` mentions HTML5/CSS3/Bootstrap 5/JavaScript. The frontend lives in `../client/` (separate app). Backend has no views/templates. and the frontend tecnologies are The frontend is built with:
-- React 18 — UI library
-- TypeScript — Type-safe JavaScript
-- Vite 7 — Build tool / dev server
-- Tailwind CSS 3 — Utility-first styling
-- shadcn/ui — Component library (45+ components based on Radix UI primitives)
-- wouter — Lightweight router
-- @tanstack/react-query — Server state management / data fetching
-- Recharts — Charts (bar charts, pie charts)
-- Framer Motion — Animations
-- next-themes — Dark/light mode toggle
-- lucide-react — Icons
-- react-hook-form + zod — Form handling & validation
-- Drizzle ORM — Shared schema types between frontend and backend
-React + Tailwind is the core of it. The rest (Vite, shadcn/ui, React Query, etc.) are supporting libraries, but React and Tailwind are the two that define the frontend. |
+| Frontend (Presentation Layer) | ⚠️ Separate repo | The .docx mentions HTML5/CSS3/Bootstrap 5/JavaScript. The frontend lives in ../client/ as a separate application. The actual frontend technology stack is: React 18 (UI library), TypeScript (type-safe JavaScript), Vite 7 (build tool/dev server), Tailwind CSS 3 (utility-first styling), shadcn/ui (component library with 45+ components based on Radix UI), wouter (lightweight routing), @tanstack/react-query (server-state management/data fetching), Recharts (charts and data visualization), Framer Motion (animations), next-themes (dark/light mode), lucide-react (icons), react-hook-form + zod (form handling and validation), and Drizzle ORM (shared schema types). React + Tailwind CSS are the core frontend technologies, while the others serve as supporting libraries and tools. |
 | **Database table `budgets`** | ❌ Missing | Document specifies a `Budget` entity with `BudgetID`, `UserID`, `CategoryID`, `MonthlyLimit`, `MonthYear`. Does not exist in schema. |
 | **Database table `audit_logs`** | ❌ Missing | Not in schema. |
 
