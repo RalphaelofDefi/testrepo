@@ -23,7 +23,7 @@
 
 ---
 
-## ❌ What's Missing (Not Implemented)
+## ❌ not in project
 
 | Document Requirement | Status | Notes |
 |---|---|---|
@@ -39,7 +39,7 @@
 
 ---
 
-## ⚠️ Extra Features (Not in Document)
+## ⚠️ Features not added in Document)
 
 | Feature | Notes |
 |---|---|
@@ -57,18 +57,12 @@
 | Category | Count |
 |---|---|
 | **Fully matching** | ~12 features |
-| **Missing from implementation** | ~7 key features (Budget, Audit Log, Forecasting, Budget Alerts) |
-| **Extra (not in document)** | ~6 features (Goals with auto-deduction, OTP, Rate Limiting, CSRF, User Settings, Goal Notifications) |
+| **not in project but in document** | ~7 key features (Budget, Audit Log, Forecasting, Budget Alerts) |
+| **should be included in document)** | ~6 features (Goals with auto-deduction, OTP, Rate Limiting, CSRF, User Settings, Goal Notifications) |
 
 ---
 
-## 🔑 Key Verdict
 
-**The project partially matches the document but has significant gaps:**
-
-1. **Budgeting Module is completely absent** — This is a core document requirement. The document specifies `Budget` class, budget thresholds per category, variance calculation, and overrun alerts. None of this exists.
-2. **Spending Prediction/Forecasting is missing** — The document emphasizes this as a key differentiator. No prediction logic exists; only historical data summaries.
-3. **Audit Logging is missing** — Required for security accountability.
 4. **Income is not a separate entity** — Document treats Income and Expense as distinct classes. The project merges them into a single `transactions` table with a `type` field (which is actually a reasonable design choice).
 
 The project has gone beyond the document in some areas (goals, OTP, rate limiting, CSRF, user settings) but has not delivered several core requirements from the proposal.
